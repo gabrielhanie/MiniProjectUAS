@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1501598441 source:c:\users\lenovo\desktop\test\uas\ticket manager\main.cpp
+	<iostream>
+	<sstream>
+	<windows.h>
+	<string>
+	<iomanip>
+
