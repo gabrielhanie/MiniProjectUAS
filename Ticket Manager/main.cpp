@@ -32,12 +32,36 @@ int InsertData(){
 };
 // == end Function Created by Eva Astria (Create Data)
 
-// == Begin Function Created by Virnanda Dwita (Find DATA)
+// == Begin Function Created by Virnanda Dwita 16053017(Find DATA)
 char MenuCari;
 
 int CariData(){
     // Copas DISINI Fungsinya.
 // == end Function Created by Virnanda dwita (Find DATA)
+      cout << "Masukkan Kode Ticket : ";
+    cin >> findData;
+        for(int x=0; x<=NoID; x++){
+            if(findData==MasterData[x][1]){
+                Nomer = atoi(MasterData[x][0].c_str());
+                Ticket= MasterData[x][1];
+                string AtasNamaAja = MasterData[x][2];
+                char *Atasnamabaru = new char[AtasNamaAja.length()+1];
+                strcpy(Atasnamabaru, AtasNamaAja.c_str());
+                strcpy(Atasnama, Atasnamabaru);
+                Asal= MasterData[x][3];
+                Tujuan=MasterData[x][4];
+                string keberangkatanAja = MasterData[x][5];
+                char *keberangkatanbaru = new char[keberangkatanAja.length()+1];
+                strcpy(keberangkatanbaru, keberangkatanAja.c_str());
+                strcpy(keberangkatan, keberangkatanbaru);
+                jenis= MasterData[x][6];
+                cout << "Data ditemukan." << endl
+                     << "Apa yang ingin anda operasikan ?" << endl
+                     << "1. Edit" << endl
+                     << "2. Hapus" << endl
+                     << "Masukkan Q untuk kembali kemenu awal." << endl << endl
+                     << "Masukkan kode menu : ";
+  
 
 // == BEGIN Function Created by Gabriella Stefanni (UPDATE dan DELETE)
                      cin >> MenuCari;
