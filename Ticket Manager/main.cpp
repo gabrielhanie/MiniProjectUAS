@@ -26,11 +26,7 @@ int tampilanAwal(){
 }
 //== END Function Created by Moch. Fiqih B (Traverse, Menu, Tampilan Awal)
 
-// == BEGIN Function Created by Eva Astria (Create Data)
-int InsertData(){
-    // Copas DISINI Fungsinya.
-  
-  
+// == BEGIN Function Created by Eva Astria (Create Data)  
 int InsertData(){
     system("CLS");
     cin.ignore();
