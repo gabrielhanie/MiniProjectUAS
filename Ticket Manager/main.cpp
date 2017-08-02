@@ -106,10 +106,66 @@ int CariData(){
                      cin >> MenuCari;
                 switch(MenuCari){
                     case '1':
-                        // Copas DISINI Fungsinya.
+                        cin.ignore();
+                        cout << "Masukkan Atas Nama : "<< endl;
+                        cin.getline(Atasnama,20);
+                        cout << "Masukkan Keberangkatan :" << endl;
+                        cin.getline(keberangkatan,100);
+                        cout << "Masukkan Nomer Ticket : "<< endl;
+                        cin >> Ticket;
+                        cout << "Masukkan Asal :"<< endl;
+                        cin >> Asal;
+                        cout << "Masukkan Tujuan :" <<endl;
+                        cin >> Tujuan;
+                        cout << "Masukkan Jenis Kendaraan :"<< endl;
+                        cin >> jenis;
+                        cout << endl << endl;
+                        cout << "Detail data" << endl
+                             << "==================" << endl;
+                        cout << "Nomer Ticket : " << Ticket << endl
+                             << "Atas Nama : " <<Atasnama << endl
+                             << "Asal : " <<Asal << endl
+                             << "Tujuan : " <<Tujuan << endl
+                             << "Keberangkatan : " <<keberangkatan << endl
+                             << "Jenis " <<jenis << endl;
+                        cout << "Apakah anda yakin ingin menyimpan data? Y/N : ";
+                        cin >> PilihanUser;
+                        if ((PilihanUser=="Y")||(PilihanUser=="y")){
+                                MasterData[x][1]=Ticket;
+                                MasterData[x][2]=string(Atasnama);
+                                MasterData[x][3]=Asal;
+                                MasterData[x][4]=Tujuan;
+                                MasterData[x][5]=string(keberangkatan);
+                                MasterData[x][6]=jenis;
+                                system("CLS");
+                                cout << "Data Berhasil diupdate."; system("pause");
+                                tampilanAwal();
+                        }else if((PilihanUser=="N")||(PilihanUser=="n")){
+                        tampilanAwal();
                         break;
                     case '2':
-                            // Copas DISINI Fungsinya.
+                            if (NoID==0){
+                                NoID=NoID-1;
+                                system("CLS");
+                                cout << "Data Berhasil Dihapus";
+                                system("pause");
+                                tampilanAwal();
+                            }else{
+                                for (int y=x; y<=NoID; y++){
+                                        int noNomer= y;
+                                        stringstream sss;
+                                        sss << noNomer;
+                                        string nonumber = sss.str();
+                                    MasterData[y][1]=MasterData[y+1][1];
+                                    MasterData[y][2]=MasterData[y+1][2];
+                                    MasterData[y][3]=MasterData[y+1][3];
+                                    MasterData[y][4]=MasterData[y+1][4];
+                                    MasterData[y][5]=MasterData[y+1][5];
+                                    MasterData[y][6]=MasterData[y+1][6];
+                                    MasterData[y][0]=nonumber;
+                                }NoID=NoID-1;system("CLS");cout << "Data Berhasil Dihapus";system("pause");tampilanAwal();
+                            }
+                        break;
                         break;
 // == END Function Created by Gabriella Stefany (UPDATE dan DELETE)
 
@@ -117,6 +173,9 @@ int CariData(){
                         tampilanAwal();
                         break;
                 }
+            }
+        }
+    }
 }
 
 int main()
