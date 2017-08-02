@@ -29,6 +29,51 @@ int tampilanAwal(){
 // == BEGIN Function Created by Eva Astria (Create Data)
 int InsertData(){
     // Copas DISINI Fungsinya.
+  
+  
+int InsertData(){
+    system("CLS");
+    cin.ignore();
+    cout << "Masukkan Atas Nama : "<< endl;
+    cin.getline(Atasnama,20);
+    cout << "Masukkan Keberangkatan :" << endl;
+    cin.getline(keberangkatan,100);
+    cout << "Masukkan Nomer Ticket : "<< endl;
+    cin >> Ticket;
+    cout << "Masukkan Asal :"<< endl;
+    cin >> Asal;
+    cout << "Masukkan Tujuan :" <<endl;
+    cin >> Tujuan;
+    cout << "Masukkan Jenis Kendaraan :"<< endl;
+    cin >> jenis;
+    cout << endl << endl;
+    cout << "Detail data" << endl
+         << "==================" << endl;
+    cout << "Nomer Ticket : " << Ticket << endl
+         << "Atas Nama : " <<Atasnama << endl
+         << "Asal : " <<Asal << endl
+         << "Tujuan : " <<Tujuan << endl
+         << "Keberangkatan : " <<keberangkatan << endl
+         << "Jenis " <<jenis << endl;
+    cout << "Apakah anda yakin ingin menyimpan data? Y/N : ";
+    cin >> PilihanUser;
+    if ((PilihanUser=="Y")||(PilihanUser=="y")){
+            Nomer= NoID+1;
+            NoID++;
+            stringstream ss;
+            ss << Nomer;
+            string number = ss.str();
+            MasterData[NoID][0]=number;
+            MasterData[NoID][1]=Ticket;
+            MasterData[NoID][2]=string(Atasnama);
+            MasterData[NoID][3]=Asal;
+            MasterData[NoID][4]=Tujuan;
+            MasterData[NoID][5]=string(keberangkatan);
+            MasterData[NoID][6]=jenis;
+    }else if((PilihanUser=="N")||(PilihanUser=="n")){
+    system("CLS");
+    }
+};
 };
 // == end Function Created by Eva Astria (Create Data)
 
