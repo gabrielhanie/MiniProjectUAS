@@ -70,15 +70,12 @@ int InsertData(){
     system("CLS");
     }
 };
-};
 // == end Function Created by Eva Astria (Create Data)
 
 // == Begin Function Created by Virnanda Dwita 16053017(Find DATA)
 char MenuCari;
 
 int CariData(){
-    // Copas DISINI Fungsinya.
-// == end Function Created by Virnanda dwita (Find DATA)
       cout << "Masukkan Kode Ticket : ";
     cin >> findData;
         for(int x=0; x<=NoID; x++){
@@ -102,6 +99,7 @@ int CariData(){
                      << "2. Hapus" << endl
                      << "Masukkan Q untuk kembali kemenu awal." << endl << endl
                      << "Masukkan kode menu : ";
+// == end Function Created by Virnanda dwita (Find DATA)
   
 
 // == BEGIN Function Created by Gabriella Stefanni (UPDATE dan DELETE)
